@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carolina Climate Control | Charleston's Trusted HVAC & Plumbing Experts</title>
+  <meta name="description" content="24/7 HVAC service in Charleston, SC. 10+ years, 30+ team members, A+ BBB rated. AC repair, heating, plumbing & more. Call 843-419-7444.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --green-900: #064e1a;
+      --green-700: #06802b;
+      --green-600: #06B327;
+      --green-500: #1ec944;
+      --green-400: #4ade6b;
+      --green-50: #edfff1;
+      --gray-900: #111827;
+      --gray-800: #1f2937;
+      --gray-700: #374151;
+      --gray-600: #4b5563;
+      --gray-500: #6b7280;
+      --gray-400: #9ca3af;
+      --gray-200: #e5e7eb;
+      --gray-100: #f3f4f6;
+      --gray-50: #f9fafb;
+      --white: #ffffff;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gray-800);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== STICKY HEADER ========== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+    }
+
+    .header-top {
+      background: var(--green-700);
+      color: var(--white);
+      padding: 6px 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .header-top-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .header-top .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+
+    .header-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--gray-900);
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      line-height: 1.2;
+      color: var(--green-700);
+    }
+
+    .logo-text span {
+      display: block;
+      font-weight: 500;
+      font-size: 0.7rem;
+      color: var(--gray-500);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-700);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green-600); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-600);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-cta:hover {
+      background: var(--green-700);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--gray-700);
+      margin: 6px 0;
+      transition: all 0.3s;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      margin-top: 110px;
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--green-900) 0%, var(--gray-900) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80') center/cover no-repeat;
+      opacity: 0.15;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to top, var(--white), transparent);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(6, 179, 39, 0.2);
+      border: 1px solid rgba(6, 179, 39, 0.3);
+      color: var(--green-400);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green-400);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--green-400);
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 32px;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--green-600);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      box-shadow: 0 4px 14px rgba(6, 179, 39, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-500);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6, 179, 39, 0.5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 40px;
+      color: var(--white);
+    }
+
+    .hero-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: var(--green-400);
+    }
+
+    .hero-card-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(6, 179, 39, 0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+
+    .hero-card-item h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .hero-card-item p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.4;
+    }
+
+    /* ========== TRUST RIBBON (WOW MOMENT) ========== */
+    .trust-ribbon {
+      position: relative;
+      z-index: 3;
+      margin-top: -60px;
+      padding: 0 24px;
+    }
+
+    .trust-ribbon-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-xl);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      border: 1px solid var(--gray-200);
+    }
+
+    .trust-stat {
+      text-align: center;
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .trust-stat:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -16px;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: var(--gray-200);
+    }
+
+    .trust-stat .number {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--green-700);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .trust-stat .label {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .trust-badges {
+      max-width: 1100px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      padding: 0 24px;
+    }
+
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      font-weight: 500;
+    }
+
+    .trust-badge-item .icon {
+      font-size: 1.2rem;
+    }
+
+    /* ========== SECTION STYLES ========== */
+    section {
+      padding: 100px 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 60px;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--green-50);
+      color: var(--green-700);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    /* ========== SERVICES ========== */
+    .services { background: var(--gray-50); }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--green-600);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--green-600);
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--green-50);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* ========== WHY CHOOSE US ========== */
+    .why-us {
+      background: var(--white);
+    }
+
+    .why-us-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-us-story h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .why-us-story p {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .why-us-story .founder {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .founder-avatar {
+      width: 52px;
+      height: 52px;
+      background: var(--green-600);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .founder-info .name {
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .founder-info .title {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+    }
+
+    .why-us-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: var(--gray-50);
+      border-radius: 14px;
+      padding: 28px;
+      border: 1px solid var(--gray-100);
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+      border-color: var(--green-600);
+    }
+
+    .feature-card .feat-icon {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .feature-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 6px;
+    }
+
+    .feature-card p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    /* ========== PROMOTIONS ========== */
+    .promos {
+      background: linear-gradient(135deg, var(--green-900) 0%, var(--gray-900) 100%);
+      color: var(--white);
+    }
+
+    .promos .section-label {
+      background: rgba(255,255,255,0.1);
+      color: var(--green-400);
+    }
+
+    .promos .section-header h2 { color: var(--white); }
+    .promos .section-header p { color: rgba(255,255,255,0.6); }
+
+    .promos-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .promo-card {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 36px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .promo-card:hover {
+      background: rgba(255,255,255,0.12);
+      transform: translateY(-4px);
+    }
+
+    .promo-card .promo-amount {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--green-400);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .promo-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .promo-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .promo-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--green-400);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .promo-cta:hover { gap: 10px; }
+
+    /* ========== SERVICE AREAS ========== */
+    .areas { background: var(--gray-50); }
+
+    .areas-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .area-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      padding: 12px 22px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      transition: all 0.2s;
+    }
+
+    .area-tag:hover {
+      border-color: var(--green-600);
+      color: var(--green-700);
+      background: var(--green-50);
+    }
+
+    .area-tag .pin { color: var(--green-600); }
+
+    /* ========== TESTIMONIALS ========== */
+    .testimonials { background: var(--white); }
+
+    .testimonials-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--gray-50);
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid var(--gray-100);
+      position: relative;
+    }
+
+    .testimonial-card .stars {
+      color: #f59e0b;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-card .quote {
+      font-size: 1rem;
+      color: var(--gray-700);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-card .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .reviewer-avatar {
+      width: 42px;
+      height: 42px;
+      background: var(--green-600);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      color: var(--gray-900);
+      font-size: 0.95rem;
+    }
+
+    .reviewer-source {
+      font-size: 0.82rem;
+      color: var(--gray-400);
+    }
+
+    /* ========== CTA SECTION ========== */
+    .cta-section {
+      background: var(--green-600);
+      text-align: center;
+      color: var(--white);
+      padding: 80px 24px;
+    }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-section .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      color: var(--green-700);
+      padding: 16px 36px;
+      border-radius: 10px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.25s;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.5);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,0.7);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .logo-text {
+      color: var(--white);
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-decoration: none;
+      transition: background 0.2s;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .footer-social a:hover { background: var(--green-600); }
+
+    .footer h4 {
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer ul a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer ul a:hover { color: var(--green-400); }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+
+    /* ========== MOBILE STICKY CTA ========== */
+    .mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: var(--green-600);
+      padding: 12px 20px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    }
+
+    .mobile-cta a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes countUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; gap: 40px; }
+      .hero h1 { font-size: 2.8rem; }
+      .hero-card { max-width: 500px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-us-grid { grid-template-columns: 1fr; gap: 40px; }
+      .promos-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .header-top { display: none; }
+      .hero { margin-top: 74px; min-height: auto; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-sub { font-size: 1.05rem; }
+      .hero-content { padding: 50px 24px 80px; }
+      .hero-card { display: none; }
+
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+
+      .trust-ribbon-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 28px;
+      }
+
+      .trust-stat:nth-child(2)::after { display: none; }
+      .trust-stat .number { font-size: 2.2rem; }
+
+      section { padding: 60px 20px; }
+      .section-header h2 { font-size: 2rem; }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .promos-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .why-us-features { grid-template-columns: 1fr; }
+
+      .cta-section h2 { font-size: 2rem; }
+      .cta-section { padding-bottom: 100px; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+      .mobile-cta { display: block; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.9rem; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+      .trust-ribbon-inner { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div class="header-top-inner">
+        <div>
+          <span class="badge"><span class="dot" style="width:6px;height:6px;background:#4ade6b;border-radius:50%;display:inline-block;animation:pulse 2s infinite"></span> 24/7 Emergency Service Available</span>
+        </div>
+        <div>
+          <a href="tel:843-419-7444" style="font-weight:700;">843-419-7444</a>
+          &nbsp;&bull;&nbsp;
+          <span>1906 Belgrade Ave, Charleston, SC</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-main">
+      <a href="#" class="logo">
+        <img src="https://lirp.cdn-website.com/2f50e16d/dms3rep/multi/opt/moose-1920w.png" alt="Carolina Climate Control" />
+        <div class="logo-text">
+          Carolina Climate Control
+          <span>Charleston's Comfort Experts</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="tel:843-419-7444" class="nav-cta">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Now
+          </a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'; document.querySelector('.nav-links').style.flexDirection = 'column'; document.querySelector('.nav-links').style.position = 'absolute'; document.querySelector('.nav-links').style.top = '100%'; document.querySelector('.nav-links').style.left = '0'; document.querySelector('.nav-links').style.right = '0'; document.querySelector('.nav-links').style.background = 'white'; document.querySelector('.nav-links').style.padding = '20px'; document.querySelector('.nav-links').style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Serving Charleston Since 2014
+        </div>
+        <h1>Keeping the Lowcountry <em>Cool, Comfortable</em> & Connected</h1>
+        <p class="hero-sub">From emergency AC repairs to complete system installations, Carolina Climate Control is Charleston's trusted partner for home comfort. 30+ team members ready to serve you.</p>
+        <div class="hero-actions">
+          <a href="tel:843-419-7444" class="btn-primary">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (843) 419-7444
+          </a>
+          <a href="#services" class="btn-secondary">
+            View Our Services &rarr;
+          </a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Why Charleston Trusts Us</h3>
+        <div class="hero-card-item">
+          <div class="hero-card-icon">&#9889;</div>
+          <div>
+            <h4>24/7 Emergency Service</h4>
+            <p>AC out at midnight? We're on call when you need us most.</p>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-icon">&#9733;</div>
+          <div>
+            <h4>A+ BBB Rated</h4>
+            <p>Google Guaranteed with hundreds of 5-star reviews.</p>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-icon">&#128176;</div>
+          <div>
+            <h4>Flexible Financing</h4>
+            <p>0% options available. Never let cost delay your comfort.</p>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-icon">&#10004;</div>
+          <div>
+            <h4>100% Satisfaction Guarantee</h4>
+            <p>We stand behind every job. Your comfort is our reputation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST RIBBON -->
+  <div class="trust-ribbon fade-in">
+    <div class="trust-ribbon-inner">
+      <div class="trust-stat">
+        <div class="number" data-target="10">10+</div>
+        <div class="label">Years Serving Charleston</div>
+      </div>
+      <div class="trust-stat">
+        <div class="number">30+</div>
+        <div class="label">Team Members</div>
+      </div>
+      <div class="trust-stat">
+        <div class="number">15</div>
+        <div class="label">Service Vehicles</div>
+      </div>
+      <div class="trust-stat">
+        <div class="number">150+</div>
+        <div class="label">Years Combined Experience</div>
+      </div>
+    </div>
+    <div class="trust-badges">
+      <div class="trust-badge-item"><span class="icon">&#10003;</span> Google Guaranteed</div>
+      <div class="trust-badge-item"><span class="icon">&#10003;</span> A+ BBB Rating</div>
+      <div class="trust-badge-item"><span class="icon">&#10003;</span> American Standard Partner</div>
+      <div class="trust-badge-item"><span class="icon">&#10003;</span> Mitsubishi Electric Dealer</div>
+      <div class="trust-badge-item"><span class="icon">&#10003;</span> Licensed & Insured</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header fade-in">
+      <div class="section-label">What We Do</div>
+      <h2>Complete Home Comfort Solutions</h2>
+      <p>From cooling and heating to plumbing and air quality, we handle everything to keep your Charleston home comfortable year-round.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">&#10052;</div>
+        <h3>Air Conditioning</h3>
+        <p>Beat the Lowcountry heat with expert AC installation, repair, and maintenance. Central air, ductless systems, and heat pumps for every home.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">&#128293;</div>
+        <h3>Heating Systems</h3>
+        <p>Stay warm through Charleston winters with furnaces, heat pumps, and geothermal systems. We install, repair, and maintain all brands.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">&#128167;</div>
+        <h3>Plumbing</h3>
+        <p>Full-service plumbing for your home — from water heaters and bathroom renovations to emergency leak repairs. 60+ years combined plumbing experience.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">&#127811;</div>
+        <h3>Indoor Air Quality</h3>
+        <p>Breathe cleaner with whole-home air purifiers, dehumidifiers, UV lighting, and duct cleaning. Vital for Charleston's humid climate.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">&#9889;</div>
+        <h3>Whole-House Generators</h3>
+        <p>Keep the power on during hurricane season. Professional generator installation with $500 off — protect your home and family.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-icon">&#128225;</div>
+        <h3>Smart Thermostats</h3>
+        <p>Upgrade to intelligent comfort control. Save energy and money with professional smart thermostat installation and setup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us" id="about">
+    <div class="why-us-grid">
+      <div class="why-us-story fade-in">
+        <div class="section-label">Our Story</div>
+        <h3>Started From a Truck. Now Charleston's Most Trusted.</h3>
+        <p>In 2014, Marshall Gay moved to Charleston with a dream and a service truck. After years of working in HVAC since his teenage years in Atlanta, he knew one thing: customers deserve better.</p>
+        <p>Today, Carolina Climate Control has grown to over 30 employees and 15 service vehicles — but the mission hasn't changed. Every job gets the same care Marshall put into his very first call.</p>
+        <div class="founder">
+          <div class="founder-avatar">MG</div>
+          <div class="founder-info">
+            <div class="name">Marshall Gay</div>
+            <div class="title">Founder, Carolina Climate Control</div>
+          </div>
+        </div>
+      </div>
+      <div class="why-us-features fade-in">
+        <div class="feature-card">
+          <div class="feat-icon">&#9201;</div>
+          <h4>Same-Day Service</h4>
+          <p>24/7 availability with emergency response when you need it most.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">&#128178;</div>
+          <h4>Upfront Pricing</h4>
+          <p>No surprises. Know the cost before we start any work.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">&#128170;</div>
+          <h4>150+ Years Experience</h4>
+          <p>Our combined team expertise means we've seen — and fixed — everything.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">&#128737;</div>
+          <h4>Satisfaction Guaranteed</h4>
+          <p>100% satisfaction on every job. We're not done until you're comfortable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOTIONS -->
+  <section class="promos" id="specials">
+    <div class="section-header fade-in">
+      <div class="section-label">Limited Time Offers</div>
+      <h2>Current Specials & Savings</h2>
+      <p>Take advantage of exclusive deals to keep your home comfortable for less.</p>
+    </div>
+    <div class="promos-grid">
+      <div class="promo-card fade-in">
+        <div class="promo-amount">$500</div>
+        <h3>Dominion Energy Rebate</h3>
+        <p>Get up to $500 back on qualifying energy-efficient heating and cooling equipment upgrades.</p>
+        <a href="tel:843-419-7444" class="promo-cta">Claim Your Rebate &rarr;</a>
+      </div>
+      <div class="promo-card fade-in">
+        <div class="promo-amount">$79</div>
+        <h3>HVAC Tune-Up Special</h3>
+        <p>Comprehensive system inspection and tune-up to keep your equipment running at peak efficiency.</p>
+        <a href="tel:843-419-7444" class="promo-cta">Schedule Today &rarr;</a>
+      </div>
+      <div class="promo-card fade-in">
+        <div class="promo-amount">0%</div>
+        <h3>Financing Available</h3>
+        <p>Flexible financing options including 0% promotional rates on qualifying system installations.</p>
+        <a href="tel:843-419-7444" class="promo-cta">Get Pre-Approved &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="areas">
+    <div class="section-header fade-in">
+      <div class="section-label">Coverage Area</div>
+      <h2>Serving the Greater Charleston Area</h2>
+      <p>From downtown Charleston to the islands, we've got the Lowcountry covered.</p>
+    </div>
+    <div class="areas-grid fade-in">
+      <span class="area-tag"><span class="pin">&#128205;</span> Charleston</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> West Ashley</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> Mt. Pleasant</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> Summerville</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> Goose Creek</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> James Island</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> Johns Island</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> Isle of Palms</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> Sullivan's Island</span>
+      <span class="area-tag"><span class="pin">&#128205;</span> Ravenel</span>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+    <div class="section-header fade-in">
+      <div class="section-label">Customer Reviews</div>
+      <h2>What Charleston Homeowners Say</h2>
+      <p>Don't just take our word for it. Here's why our neighbors trust us with their comfort.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">"Our AC went out on the hottest day of the year. Carolina Climate Control had a tech at our house within two hours. Professional, honest, and had us cool again before dinner. Can't recommend them enough."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">JM</div>
+          <div>
+            <div class="reviewer-name">Jennifer M.</div>
+            <div class="reviewer-source">West Ashley, SC</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">"We got three quotes for a new system. Carolina Climate Control wasn't the cheapest, but they were the most thorough in explaining what we needed and why. The financing made it affordable. Great experience."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DT</div>
+          <div>
+            <div class="reviewer-name">David T.</div>
+            <div class="reviewer-source">Mt. Pleasant, SC</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="quote">"Been using them for annual tune-ups for 3 years now. Always on time, always respectful of our home. When we needed a new heat pump, Marshall himself came out. That's the kind of company you want to work with."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SR</div>
+          <div>
+            <div class="reviewer-name">Sarah R.</div>
+            <div class="reviewer-source">Summerville, SC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready for Real Comfort?</h2>
+    <p>Whether it's an emergency repair or a full system upgrade, your comfort starts with one call.</p>
+    <div class="cta-buttons">
+      <a href="tel:843-419-7444" class="btn-white">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (843) 419-7444
+      </a>
+      <a href="#services" class="btn-outline-white">View All Services</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text">Carolina Climate Control</div>
+        <p>Charleston's trusted HVAC and plumbing experts since 2014. Locally owned and operated by Marshall Gay, with 30+ team members dedicated to your home comfort.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/carolinaclimatecontrol/" aria-label="Facebook">FB</a>
+          <a href="https://www.instagram.com/carolinaclimatecontrol/" aria-label="Instagram">IG</a>
+          <a href="https://youtube.com/UC-sujdrZvQZpKaf-lUH8ApA" aria-label="YouTube">YT</a>
+          <a href="https://www.linkedin.com/company/carolina-climate-control-charleston/" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Air Conditioning</a></li>
+          <li><a href="#services">Heating</a></li>
+          <li><a href="#services">Plumbing</a></li>
+          <li><a href="#services">Indoor Air Quality</a></li>
+          <li><a href="#services">Generators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="https://www.carolinaclimatecontrolsc.com/financing">Financing</a></li>
+          <li><a href="https://www.carolinaclimatecontrolsc.com/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:843-419-7444">(843) 419-7444</a></li>
+          <li><a href="tel:843-870-2076">(843) 870-2076</a></li>
+          <li>1906 Belgrade Ave</li>
+          <li>Charleston, SC 29407</li>
+          <li>Mon-Sun: 6AM - 6PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Carolina Climate Control. All rights reserved.</span>
+      <span>SC Licensed & Insured &bull; A+ BBB Rated</span>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta">
+    <a href="tel:843-419-7444">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now &mdash; (843) 419-7444
+    </a>
+  </div>
+
+  <!-- SCROLL ANIMATIONS -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

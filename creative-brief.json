@@ -1,0 +1,40 @@
+{
+  "emotional_feel": "Trustworthy local expert with Southern warmth. The site should feel like calling a reliable neighbor who happens to be an HVAC pro — approachable, competent, and reassuring. Charleston charm meets technical confidence. The founder started from his truck in 2014 and built a 30+ person team — that hustle and care should come through.",
+  "customer_pain": "Charleston summers are brutal — when AC breaks, it's an emergency. Customers are stressed, sweating, and worried about being overcharged. They need fast response, transparent pricing, and confidence that the job will be done right the first time. Many are also dealing with aging systems and dreading the cost of replacement.",
+  "trust_triggers": [
+    "In business since 2014 — 10+ years serving Charleston",
+    "30+ employees, 15 service vehicles",
+    "150+ years combined HVAC experience on the team",
+    "Google Guaranteed badge",
+    "A+ BBB rating",
+    "American Standard & Mitsubishi Electric partner",
+    "100% Satisfaction Guarantee",
+    "24/7 emergency service",
+    "Dominion Energy rebate partner (up to $500)",
+    "Financing available for all jobs",
+    "Locally owned — founder Marshall Gay started from his truck"
+  ],
+  "conversion_triggers": [
+    "Click-to-call phone number above fold: 843-419-7444",
+    "24/7 emergency service CTA",
+    "Free in-home estimate offer",
+    "0% financing available",
+    "$79 tune-up special",
+    "$500 off generator installation",
+    "Dominion Energy rebates up to $500"
+  ],
+  "current_weaknesses": [
+    "Hero section lacks emotional punch — generic stock photo with text overlay, doesn't feel Charleston-specific",
+    "Phone number isn't prominent enough in mobile view — needs sticky header CTA",
+    "Reviews/social proof not visible above fold — trust signals buried below",
+    "Too many navigation items create decision paralysis — 9 sub-menus under AC alone",
+    "Promotions page has expired offers mixed with current ones — looks unmanaged",
+    "No team photos or faces — feels corporate despite being a local family business",
+    "Copy is functional but lacks personality — doesn't tell the founder's story effectively",
+    "Service pages feel templated — same layout for every service",
+    "Color palette (green/gray) is fine but underutilized — site feels visually flat",
+    "No maintenance plan page (404) — missed recurring revenue opportunity"
+  ],
+  "wow_moment": "Trust ribbon + stats counter section — animated counters showing '10+ Years Serving Charleston', '30+ Team Members', '15 Service Vehicles', '150+ Years Combined Experience', paired with the Google Guaranteed badge and A+ BBB rating. This section will be immediately visible and create instant credibility that their current site buries. Secondary wow: a Charleston-specific hero with emotional copy about keeping Lowcountry families comfortable.",
+  "preview_opportunity": "high"
+}
